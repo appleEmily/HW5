@@ -12,35 +12,33 @@ class TableViewController: UITableViewController {
     
     var number:[Int]!
     
-    
-    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        let random = Int.random(in: 0..<100)
-        
-        for i in 0 ..< 19 {
+        for i in 0 ..< 20 {
+            let random:Int = Int.random(in: 0..<100)
+            print(random)
             number.append(random)
-            print(number)
+            //numberの配列にrandom中洲を２０個入れられた。
         }
-        
-        
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        super.viewDidLoad()
+        print(number)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    //sectionの数
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
+    //cellの個数
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
-        
-        //cell.Label.text = String(number[indexPath.row - 1])
+        cell.label.text = String(number[indexPath.row])
         
         return cell
     }

@@ -23,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="673" y="706"/>
+            <point key="canvasLocation" x="753" y="690"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="cut-ev-6E6">
